@@ -34,15 +34,13 @@ public class ModStorage {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     String[] parts = line.split("\\|");
-                    if (parts.length > 11) {
+                    if (parts.length > 10) {
                         Prereq prereqTree = parsePrereqTree(parts[11]);
-                        boolean canSu = Integer.parseInt(parts[12].trim()) == 1;
                         modules.add(new Mod(parts[1].trim(), parts[3].trim(),
                                 Integer.parseInt(parts[2].trim()), parts[0].trim(),
                                 Double.parseDouble(parts[4].trim()), Double.parseDouble(parts[5].trim()),
                                 Double.parseDouble(parts[6].trim()), Double.parseDouble(parts[7].trim()),
-                                Double.parseDouble(parts[8].trim()), parts[9].trim(), parts[10].trim(), prereqTree,
-                                canSu));
+                                Double.parseDouble(parts[8].trim()), parts[9].trim(), parts[10].trim(), prereqTree));
                     } else {
                         System.err.println("Invalid line format: " + line);
                     }

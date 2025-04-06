@@ -45,8 +45,7 @@ public class AddCustomModuleTest {
         assertTrue(currentUser.hasModule(testModule3));
     }
 
-    @Test
-    public void testAddCustomModulePrint() {
+    @Test public void testAddCustomModulePrint() {
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
@@ -61,8 +60,7 @@ public class AddCustomModuleTest {
         assertTrue(output.contains("Failed to add module PL1101E. It already exists."));
     }
 
-    @Test
-    public void testAddCustomModuleFails() {
+    @Test public void testAddCustomModuleFails() {
         int testSemester1 = 0;
         int testSemester2 = 10;
         int testMC1 = 4;

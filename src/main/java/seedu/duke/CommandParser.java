@@ -3,7 +3,6 @@ package seedu.duke;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import seedu.duke.command.ClearModules;
 import seedu.duke.command.Command;
 import seedu.duke.command.ListModules;
 import seedu.duke.command.DetailModules;
@@ -170,10 +169,6 @@ public class CommandParser {
                 logger.info("Executing Workload command to view all modules.");
                 cmdObject = new Workload(currentUser);
             }
-            break;
-
-        case "/clear":
-            cmdObject = new ClearModules(currentUser);
             break;
 
         case "/exit":

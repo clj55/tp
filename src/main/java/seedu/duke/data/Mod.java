@@ -16,11 +16,10 @@ public class Mod {
     private String preclusion = null;
     private String prerequisites = null;
     private Prereq prereqTree = null;
-    private boolean isSuable = true;
 
     public Mod(String name, String description, int numMC, String code,
                double lectureHours, double tutHours, double labHours, double projHours, double prepHours,
-               String preclusion, String prerequisites, Prereq prereqTree, boolean canSu) {
+               String preclusion, String prerequisites, Prereq prereqTree) {
         this.name = name;
         this.description = description;
         this.numMC = numMC;
@@ -33,7 +32,6 @@ public class Mod {
         this.preclusion = preclusion;
         this.prerequisites = prerequisites;
         this.prereqTree = prereqTree;
-        this.isSuable = canSu;
     }
 
     public Mod(String code, int numMC, String name) {
@@ -65,7 +63,7 @@ public class Mod {
         this.preclusion = foundMod.getPreclusion();
         this.prerequisites = foundMod.getPrerequisites();
         this.prereqTree = foundMod.getPrereqTree();
-        this.isSuable = foundMod.isSUable();
+
     }
 
     public String getName() {
@@ -114,10 +112,6 @@ public class Mod {
 
     public Prereq getPrereqTree() {
         return prereqTree;
-    }
-
-    public boolean isSUable() {
-        return isSuable;
     }
 
     public String toString() {

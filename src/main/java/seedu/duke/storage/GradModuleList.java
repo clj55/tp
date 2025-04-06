@@ -53,7 +53,7 @@ public class GradModuleList {
                             " an Undergraduate Degree THEN ( must have completed" +
                             " EP ENGLISH LANGUAGE PROFICIENCY TEST at a" +
                             " grade of at least Y OR must have completed " +
-                            "ES1000 at a grade of at least D)", null, true)
+                            "ES1000 at a grade of at least D)", null)
             ));
 
             YEAR1SEM2MODULES = new ArrayList<>(Arrays.asList(
@@ -72,7 +72,7 @@ public class GradModuleList {
                     new Mod("Cultures and Connections", "", 4, "GEC1XXX",
                             0, 0, 0, 0, 0,
                             "Unconfirmed preclusions", "Unconfirmed prerequisites",
-                            null, true)
+                            null)
             ));
 
             YEAR2SEM2MODULES = new ArrayList<>(Arrays.asList(
@@ -104,7 +104,7 @@ public class GradModuleList {
                     new Mod("Communities and Engagement", "", 4, "GEN1XXX",
                             0, 0, 0, 0, 0,
                             "Unconfirmed preclusions", "Unconfirmed prerequisites",
-                            null, true),
+                            null),
                     generateUE()
             ));
         } catch (ModNotInDatabase e) {
@@ -116,7 +116,7 @@ public class GradModuleList {
     private static Mod generateUE() {
         return new Mod("Unrestricted Elective", "", 4, "UE",
                 0, 0, 0, 0, 0,
-                "Unconfirmed preclusions", "Unconfirmed prerequisites", null, false);
+                "Unconfirmed preclusions", "Unconfirmed prerequisites", null);
     }
 
 }

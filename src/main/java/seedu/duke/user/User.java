@@ -62,7 +62,7 @@ public class User {
         int totalMCs = 0;
         for (ArrayList<UserMod> mods : semesterModules.values()) {
             for (UserMod mod : mods) {
-                if (mod.getGrade() != null && !mod.isSU()) {
+                if (mod.getGrade() != null && mod.isSU() == false) {
                     int modMC = mod.getNumMC();
                     totalMCs += modMC;
                 }
@@ -101,6 +101,7 @@ public class User {
 
     public void clearModules() {
         semesterModules.clear();
+        updateGPA(); // Reset GPA after clearing modules
     }
 
     public UserMod getModule(String code) {

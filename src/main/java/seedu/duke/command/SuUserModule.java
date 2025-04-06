@@ -20,11 +20,6 @@ public class SuUserModule implements Command {
             return;
         }
 
-        if (!module.isSUable()) {
-            System.out.println("Failed to SU " + moduleCode.toUpperCase() + ". Module has no S/U option");
-            return;
-        }
-
         if (module.getGrade() == null){
             System.out.println("Failed to SU " + moduleCode.toUpperCase() + "." +
                     " It has not been initialised with a grade yet");
